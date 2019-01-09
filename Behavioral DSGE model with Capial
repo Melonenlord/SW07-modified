@@ -166,7 +166,7 @@ parameters curvw ${\varepsilon_w}$  (long_name='Curvature Kimball aggregator wag
     M           ${M}$               (long_name='slope of attention')                                    //implementation of new miopic Parameter  
     ;
 
-// new behavioral Paramter (1= full rational; 0 = fully myopic
+// new behavioral Paramter (1= full rational; 0 = fully myopic)
 M= 1;     
 
 // fixed parameters
@@ -291,7 +291,7 @@ model(linear);
                 - (1-chabb/cgamma)/(csigma*(1+chabb/cgamma))*(r-pinf(+1) + 0*b) +b ;
  */
 
-          [name='Consumption Euler Equation, SW Equation (2)']                                                             //(2) nee behavioral Consuption Euler Equation with M paramter
+          [name='Behavioral Consumption Euler Equation, SW Equation (2)']                                                             //(2) nee behavioral Consuption Euler Equation with M paramter
 	      c = (chabb/cgamma)/(1+chabb/cgamma)*c(-1)                                   
                 + M * (1/(1+chabb/cgamma))*c(+1)                                 
                 +((csigma-1)*cwhlc/(csigma*(1+chabb/cgamma)))*(lab-lab(+1)) 
