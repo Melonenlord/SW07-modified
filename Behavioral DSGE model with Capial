@@ -81,7 +81,7 @@ var //labobs      ${lHOURS}$      (long_name='log hours worked')    //all observ
 
     ewma        ${\eta^{w,aux}}$ (long_name='Auxiliary wage markup moving average variable')            
     epinfma     ${\eta^{p,aux}}$ (long_name='Auxiliary price markup moving average variable')  
-    //zcapf       ${z^{flex}}$    (long_name='Capital utilization rate flex price economy')               
+    //zcapf       ${z^{flex}}$    (long_name='Capital utilization rate flex price economy')     // all flexible economy variables taken out          
     //rkf         ${r^{k,flex}}$  (long_name='rental rate of capital flex price economy')                 
     //kf          ${k^{s,flex}}$  (long_name='Capital services flex price economy')                       
     //pkf         ${q^{flex}}$    (long_name='real value of existing capital stock flex price economy')  
@@ -166,8 +166,8 @@ parameters curvw ${\varepsilon_w}$  (long_name='Curvature Kimball aggregator wag
     M           ${M}$               (long_name='slope of attention')                                    //implementation of new miopic Parameter  
     ;
 
-// new behavioral Paramter (1= full rational; 0 = fully myopic)
-M= 1;     
+// new behavioral Paramter (1= full rational; 0 = fully myopic) //error when M<0.95
+M= 0.8;     
 
 // fixed parameters
 ctou=.025;
